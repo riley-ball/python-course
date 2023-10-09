@@ -1,0 +1,220 @@
+Week 1: Introduction to Python
+
+Lesson: Introduction to Python and its history, installing Python and setting up the development environment.
+
+Activity: Dive into Python by setting up your environment and running a special "Python's Greeting!" program. This program could introduce a Super Smash Bros. character or a Dungeons & Dragons hero of your choice! For instance, you could make Python greet you with "Hello, warrior! Ready to embark on an adventure with Link (or your favorite character) today?" As an alternative, you could program Python to tell a joke or riddle related to your favorite game. This exciting start will set the tone for our game-themed Python journey!
+
+
+```python
+# Ask the user for their favorite character
+character = input("Who is your favorite Super Smash Bros. character or D&D hero? ")
+
+# Print a greeting message
+print("Hello, warrior! Ready to embark on an adventure with " + character + " today?")
+```
+
+    Hello, warrior! Ready to embark on an adventure with  today?
+    
+
+# Week 2: Data Types and Variables
+
+**Lesson:** Basic data types (strings, integers, floats, booleans), defining and using variables.
+
+**Activity:** Develop a program that simulates a short adventure with your favorite Super Smash Bros. character or D&D hero using user input and variables. Alternatively, create a trivia quiz about Super Smash Bros. or D&D facts using various data types.
+
+---
+
+Week 2: Data Types and Variables
+
+Lesson: Basic data types (strings, integers, floats, booleans), defining and using variables.
+
+In this Jupyter notebook, you're going to write a program that asks the user for their favorite character, their weapon of choice, and the number of enemies they would like to face in a fictitious battle.
+
+```python
+# Ask the user for their favorite character and weapon
+character = input("Who is your favorite Super Smash Bros. character or D&D hero? ")
+weapon = input(f"What weapon will {character} use in the adventure? ")
+
+# Ask the user for the number of enemies they want to face
+enemy_count = input(f"How many enemies do you want {character} to face? ")
+
+# Print an adventure story
+print("\nGreat! Here's your adventure:")
+print(f"{character} grabs a {weapon} and prepares to face {enemy_count} enemies. Good luck, brave warrior!")
+```
+
+Run the code cell above. When you execute it, it will ask for your favorite game character, weapon, and the number of enemies, and then print a fun adventure story based on your inputs.
+
+---
+
+This activity introduces the concept of using different data types (strings and integers) and combining them to form a cohesive output. It adds a touch of fun by integrating elements from their favorite games.
+
+
+```python
+
+```
+
+
+```python
+# Activity: Storytelling program
+name = input("What's your name? ")
+animal = input("What's your favorite animal? ")
+food = input("What's your favorite food? ")
+
+story = f"One day, {name} was walking through the forest and met a {animal}. They quickly became friends and had a picnic with lots of {food}. They had a great time!"
+
+print(story)
+```
+
+    One day,  was walking through the forest and met a . They quickly became friends and had a picnic with lots of . They had a great time!
+    
+
+Week 3: Conditional Statements and Loops
+
+Lesson: Comparison operators, if-elif-else statements, basic loops (for and while)
+Activity: Create a personalized adventure story using conditional statements, where the narrative changes based on user choices. Alternatively, build a fun number guessing game using loops.
+
+
+```python
+# Activity: Personalized Adventure Story
+print("You are in a dark forest. There are two paths ahead of you.")
+choice = input("Do you choose the left path or the right path? (left/right) ")
+
+if choice.lower() == 'left':
+    print("You encounter a friendly unicorn!")
+elif choice.lower() == 'right':
+    print("You come across a treasure chest!")
+else:
+    print("Invalid choice! Try again.")
+
+# Activity: Number Guessing Game
+import random
+
+number_to_guess = random.randint(1, 10)
+guess = int(input("Guess a number between 1 and 10: "))
+
+while guess != number_to_guess:
+    guess = int(input("Wrong guess. Try again: "))
+
+print("Congratulations! You guessed the number.")
+```
+
+    You are in a dark forest. There are two paths ahead of you.
+    Invalid choice! Try again.
+
+
+Week 4: Lists and Tuples
+
+Lesson: Lists, tuples and their methods, indexing and slicing, nested data structures
+Activity: Design a program that simulates a magic 8-ball using lists. Or, create a simple program that manages a list of favorite songs or movies.
+
+
+```python
+# Activity: Magic 8-ball program
+import random
+
+answers = ['Yes', 'No', 'Maybe', 'Ask again later', 'Absolutely', 'Not in a million years']
+
+question = input("Ask the Magic 8-Ball a question: ")
+
+print("The Magic 8-Ball says:", random.choice(answers))
+```
+
+    The Magic 8-Ball says: Maybe
+    
+
+Week 5: Functions and Modules
+
+Lesson: Defining and calling functions, function parameters, return values, importing modules
+Activity: Develop a fortune-telling application using functions and Python's random module. Alternatively, build a joke generator that delivers random joke
+
+
+```python
+# Import the random module
+import random
+
+# Define a list of fortunes
+fortunes = [
+    "You will have a great day!",
+    "Something unexpected will happen.",
+    "You will make a new friend soon.",
+    "Adventure is waiting for you around the corner.",
+    "A pleasant surprise is waiting for you."
+]
+
+# Define a function to get a random fortune
+def get_fortune(fortune_list):
+    return random.choice(fortune_list)
+
+# Test the function
+print(get_fortune(fortunes))
+
+```
+
+    Adventure is waiting for you around the corner.
+    
+
+Week 6: File Handling
+
+Lesson: Reading and writing files, file modes, working with paths.
+
+Activity: Engage in some Super Smash Bros. fun by developing a program that tracks your favorite Super Smash Bros. characters and saves them to a text file. You can add characters, view your list, and even remove characters! For those who want a bit more challenge, you could add features like character stats or ranking. This activity helps you understand how to handle files by reading from and writing to them, and is a great step into managing data in a fun, game-themed way.
+
+
+```python
+# Function to add a character
+def add_character():
+    character_name = input("Enter the character's name: ")
+    with open('characters.txt', 'a') as file:
+        file.write(character_name + "\n")
+    print(f"{character_name} has been added to your list!")
+
+# Function to view the characters
+def view_characters():
+    print("Your characters:")
+    with open('characters.txt', 'r') as file:
+        print(file.read())
+
+# Main program
+while False:
+    print("\n1. Add a character\n2. View characters\n3. Quit")
+    choice = input("Choose an option: ")
+    if choice == '1':
+        add_character()
+    elif choice == '2':
+        view_characters()
+    elif choice == '3':
+        break
+    else:
+        print("Invalid choice. Please try again.")
+```
+
+Week 7: Exceptions and Error Handling
+
+Lesson: Understanding different types of errors, exception handling (try, except, else, finally)
+Activity: Build a program that simulates a tricky maze, and handle errors when the user chooses the wrong path. Or, create a program that performs calculations and handles exceptions when invalid inputs are entered.
+
+Week 8: Dictionaries and Sets
+
+Lesson: Introduction to dictionaries, sets and their methods, iterating through dictionaries and sets
+Activity: Design a treasure hunt game using dictionaries to store clues. Alternatively, create a simple language translation program with a fun twist like a "pirate speak" translator.
+
+Week 9: Classes and Objects
+
+Lesson: Object-oriented programming (OOP) concepts, defining classes, creating objects, constructors, methods, attributes
+Activity: Design a virtual pet game where each pet object can perform different actions like eat, sleep, or play. Or, create a fantasy game with different character classes (like wizards, warriors, and rogues).
+
+Week 10: Inheritance and Polymorphism
+
+Lesson: Inheritance, polymorphism, method overriding, multiple inheritance, and super()
+Activity: Design a zoo or a fantasy world simulation with different animal or creature classes inheriting from a base class, demonstrating polymorphism. Or, create a simple race game with different vehicle classes.
+
+Week 11: Modules and Libraries
+
+Lesson: Introduction to Python's standard library, creating and using custom modules, using external libraries
+Activity: Create a program that uses external libraries to draw different shapes or colors (like a virtual art canvas). Or, build a simple chatbot that can talk about favorite subjects.
+
+Week 12: Final Project and Wrap-up
+
+Lesson: Review of the entire course, tips on further learning, Python community resources
+Activity: Students work on a final project of their choice, such as a personalized adventure game, a superhero generator, a virtual garden, or a simple music maker. Students present their projects
