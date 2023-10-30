@@ -23,9 +23,9 @@
 # - Use string concatenation to assemble the final story.
 
 # Starter Code:
-main_character = input("Enter the name for the main character: ")
-animal = input("Enter an animal: ")
-location = input("Enter a location: ")
+main_character = None
+animal = None
+location = None
 
 story_template = "Once upon a time, " + main_character + " went to the " + location + ". There, " + main_character + " met a friendly " + animal + ". They had an adventure of a lifetime!"
 print("Story: ")
