@@ -1,7 +1,0 @@
-Python Project Ideas: Beginner Level. Create a code generator. This can that take text as input, replaces each letter with another letter, and outputs the "encoded" message. Build a countdown calculator. Write some code that can take two dates as input, and then calculate the amount of time between them.
-
-Quiz Application. Knowledge is power. There are so many things in the world to learn, and quizzes help in testing the understanding of those concepts. You, as an intermediate Python developer, do not have to understand everything about the language. Taking tests is one way to find out things you don't fully understand.
-
-More Fun Python projects for game dev: Snake; Hangman; Guessing Game; Rock, Paper, Scissors; Dice Rolling Simulator in Python; Quiz Application. Another popular and fun project you can build using Python is a quiz application. A popular example of this is Kahoot, which is famous for making learning a fun activity among the students. The ...
-
-Python has become one of the most popular languages. So getting only the theoretical knowledge will be of no use unless and until you don't work on some real-time projects. Working on such projects will test your Python knowledge and you will get some hands-on experience. Moreover, working on such projects will help you improve your knowledge.
